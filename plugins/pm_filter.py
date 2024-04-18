@@ -239,21 +239,21 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⌫ 𝐁𝐀𝐂𝐊", callback_data=f"next_{req}_{key}_{off_set}"),
+            [InlineKeyboardButton("𝐍𝐄𝐗𝐓", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"𝐏𝐀𝐆𝐄 {math.ceil(int(offset) / 7) + 1} / {math.ceil(total / 7)}",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"{math.ceil(int(offset) / 7) + 1} / {math.ceil(total / 7)}", callback_data="pages"),
-             InlineKeyboardButton("𝐍𝐄𝐗𝐓 ⌦", callback_data=f"next_{req}_{key}_{n_offset}")])
+             InlineKeyboardButton("𝐍𝐄𝐗𝐓 ", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("⌫ 𝐁𝐀𝐂𝐊", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(" 𝐁𝐀𝐂𝐊", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"𝐏𝐀𝐆𝐄 {math.ceil(int(offset) / 7) + 1} / {math.ceil(total / 7)}",
                                      callback_data="pages"),
-                InlineKeyboardButton("𝐍𝐄𝐗𝐓 ⌦", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("𝐍𝐄𝐗𝐓 ", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -970,8 +970,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "aswin":
         buttons = [[
             InlineKeyboardButton('ᴀᴜᴅʙᴏᴏᴋ', callback_data='abook'),
-            InlineKeyboardButton('ᴄᴏᴠɪᴅ', callback_data='corona'),
-            InlineKeyboardButton('ɢᴀᴍᴇs', callback_data='fun')
+            
         ], [
             InlineKeyboardButton('ᴘɪɴɢ', callback_data='pings'),
             InlineKeyboardButton('ᴊsᴏɴᴇ', callback_data='json'),
@@ -1010,7 +1009,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carb'),
         ], [
             InlineKeyboardButton('ᴄᴏᴜɴᴛʀʏ', callback_data='country'),
-            InlineKeyboardButton('ᴏᴘᴇɴᴀɪ', callback_data='opnai'),
+            
             InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start')
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='aswin')
