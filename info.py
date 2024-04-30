@@ -50,12 +50,12 @@ BOT_TOKEN = environ['BOT_TOKEN']
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/6de4ac829edbf01867a05.jpg')).split()
-NOR_IMG = environ.get('NOR_IMG', "https://telegra.ph/file/6de4ac829edbf01867a05.jpg")
-SPELL_IMG = environ.get('SPELL_IMG',"https://telegra.ph/file/6de4ac829edbf01867a05.jpg")
+PICS = (environ.get('PICS', 'https://telegra.ph/file/a454f0596a1c3b0425c4e.jpg')).split()
+NOR_IMG = environ.get('NOR_IMG', "https://telegra.ph/file/a454f0596a1c3b0425c4e.jpg")
+SPELL_IMG = environ.get('SPELL_IMG',"https://telegra.ph/file/a454f0596a1c3b0425c4e.jpg")
 
 # Welcome area
-MELCOW_IMG = environ.get('MELCOW_IMG',"https://telegra.ph/file/e54cae941b9b81f13eb71.jpg")
+MELCOW_IMG = environ.get('MELCOW_IMG',"https://telegra.ph/file/a454f0596a1c3b0425c4e.jpg")
 MELCOW_VID = environ.get('MELCOW_VID',"")
 
 
@@ -118,7 +118,7 @@ S_GROUP = environ.get('S_GROUP',"https://t.me/maxmallumovieworldsupport")
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/mallumovieworldmain1")
 #Must change this link to work redirect (FILE_FORWORD)
 FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/mallumovieworldmain1")
-MSG_ALRT = environ.get('MSG_ALRT', '𝑪𝑯𝑬𝑪𝑲 & 𝑻𝑹𝒀 𝑨𝑳𝑳 𝑴𝒀 𝑭𝑬𝑨𝑻𝑼𝑹𝑬𝑺')
+MSG_ALRT = environ.get('MSG_ALRT', '𝑪𝑯𝑬𝑪𝑲 and 𝑻𝑹𝒀 𝑨𝑳𝑳 𝑴𝒀 𝑭𝑬𝑨𝑻𝑼𝑹𝑬𝑺')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'XBOTSUPPORTS')
