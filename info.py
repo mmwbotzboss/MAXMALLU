@@ -56,7 +56,7 @@ SPELL_IMG = environ.get('SPELL_IMG',"https://telegra.ph/file/a454f0596a1c3b0425c
 
 # Welcome area
 MELCOW_IMG = environ.get('MELCOW_IMG',"https://telegra.ph/file/a454f0596a1c3b0425c4e.jpg")
-MELCOW_VID = environ.get('MELCOW_VID',"")
+MELCOW_VID = environ.get('MELCOW_VID',"https://telegra.ph/file/a454f0596a1c3b0425c4e.jpg")
 
 
 
@@ -101,7 +101,7 @@ AI = is_enabled((environ.get("AI","True")), True)
 OPENAI_API = environ.get("OPENAI_API","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")
 GOOGLE_API_KEY = os.environ.get('API_KEY', '') # give your Google api key
 AI_LOGS = int(environ.get("AI_LOGS"," ")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of Bot ]
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/XBOTSUPPORTS')
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/maxmallumovieworldsupport')
 
 
 #Auto approve
