@@ -18,7 +18,7 @@ class script(object):
 ✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v2.0.1 [ 𝙱𝙴𝚃𝙰 ]</b>"""
 
     SOURCE_TXT = """<b>NOTE:</b>
-<b>- MALLU IS NOT A OPEAN PROJECT </b>
+<b>- 🐾𝙼𝙰𝚇🐾 BOT IS NOT A OPEAN PROJECT </b>
 <b>DEVS:</b>
 - <a href=https://t.me/aktelegram1>CLICK HERE</a>"""
 
