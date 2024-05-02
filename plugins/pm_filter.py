@@ -213,12 +213,12 @@ async def next_page(bot, query):
             ]
     btn.insert(0,
                [
-                   InlineKeyboardButton(f' ⭕ {search} ⭕ ', 'qinfo')
+                   InlineKeyboardButton(f' 🐾 {search} 🐾 ', 'qinfo')
                ]
                )
     btn.insert(1,
                [
-                   InlineKeyboardButton("Send All 1st 10 Files !", callback_data=f"send_fall#files#{key}#{offset}"),
+                   InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Fɪʟᴇs Tᴏ PM !", callback_data=f"send_fall#files#{key}#{offset}"),
                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs​", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
                ]
                )
@@ -239,21 +239,21 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("𝐍𝐄𝐗𝐓", callback_data=f"next_{req}_{key}_{off_set}"),
+            [InlineKeyboardButton("𝐍𝐄𝐗𝐓 ☞", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"𝐏𝐀𝐆𝐄 📚 {math.ceil(int(offset) / 7) + 1} / {math.ceil(total / 7)}",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
-            [InlineKeyboardButton(f"{math.ceil(int(offset) / 7) + 1} / {math.ceil(total / 7)}", callback_data="pages"),
+            [InlineKeyboardButton(f"📚{math.ceil(int(offset) / 7) + 1} / {math.ceil(total / 7)}", callback_data="pages"),
              InlineKeyboardButton("𝐍𝐄𝐗𝐓 ", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton(" 𝐁𝐀𝐂𝐊", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton("🚶‍♂️𝐁𝐀𝐂𝐊", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"𝐏𝐀𝐆𝐄 📚 {math.ceil(int(offset) / 7) + 1} / {math.ceil(total / 7)}",
                                      callback_data="pages"),
-                InlineKeyboardButton("𝐍𝐄𝐗𝐓 ", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("𝐍𝐄𝐗𝐓 ☞", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -292,13 +292,13 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
         0,
         [
             InlineKeyboardButton(
-                text=" ꜱᴇʟᴇᴄᴛ ʏᴏᴜʀ ʟᴀɴɢᴜᴀɢᴇꜱ you Favour  ☟", callback_data="selectlang"
+                text=" ꜱᴇʟᴇᴄᴛ ʏᴏᴜʀ ʟᴀɴɢᴜᴀɢᴇꜱ  ☟", callback_data="selectlang"
             )
         ],
     )
     req = query.from_user.id
     offset = 0
-    btn.append([InlineKeyboardButton(text="↺ ʙᴀᴄᴋ ᴛᴏ All ꜰɪʟᴇs ​↻", callback_data=f"next_{req}_{key}_{offset}")])
+    btn.append([InlineKeyboardButton(text="↺ ʙᴀᴄᴋ ᴛᴏ  ꜰɪʟᴇs ​↻", callback_data=f"next_{req}_{key}_{offset}")])
 
     await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
 
@@ -1037,12 +1037,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('♻️sᴛᴀᴛᴜs ', callback_data='stats'),
-            InlineKeyboardButton('sᴏᴜʀᴄᴇ', callback_data='source')
+            InlineKeyboardButton('🔍sᴏᴜʀᴄᴇ🔎', callback_data='source')
         ], [
             InlineKeyboardButton('🏠ʜᴏᴍᴇ', callback_data='start'),
             
         ], [
-            InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
+            InlineKeyboardButton('ℹ️ᴄʟᴏsᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -1526,12 +1526,12 @@ async def auto_filter(client, msg, spoll=False):
     key = f"{message.chat.id}-{message.id}"
     btn.insert(0,
                [
-                   InlineKeyboardButton(f' ⭕ {search} ⭕ ', 'qinfo')
+                   InlineKeyboardButton(f' 🐾 {search} 🐾 ', 'qinfo')
                ]
                )
     btn.insert(1,
                [
-                   InlineKeyboardButton("Send All !",
+                   InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Fɪʟᴇs Tᴏ PM !",
                                         callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs​", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
                ]
@@ -1550,8 +1550,8 @@ async def auto_filter(client, msg, spoll=False):
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"𝐏𝐀𝐆𝐄 1/{math.ceil(int(total_results) / 7)}", callback_data="pages"),
-             InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ⌦", callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton(text=f"📚𝐏𝐀𝐆𝐄 1/{math.ceil(int(total_results) / 7)}", callback_data="pages"),
+             InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ☞", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
