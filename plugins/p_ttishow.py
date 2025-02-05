@@ -9,8 +9,6 @@ from Script import script
 from pyrogram.errors import ChatAdminRequired
 import asyncio
 
-"""-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
-
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
     r_j_check = [u.id for u in message.new_chat_members]
@@ -153,7 +151,7 @@ async def re_enable_chat(bot, message):
 
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
-    rju = await message.reply('Fetching stats..')
+    mmw = await message.reply("**Total Files Checking**")
     total_users = await db.total_users_count()
     totl_chats = await db.total_chat_count()
     files = await Media.count_documents()
@@ -161,12 +159,9 @@ async def get_ststs(bot, message):
     free = 536870912 - size
     size = get_size(size)
     free = get_size(free)
-    await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
+    await mmw.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
 
 
-# a function for trespassing into others groups, Inspired by a Vazha
-# Not to be used , But Just to showcase his vazhatharam.
-# @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
     if len(message.command) == 1:
